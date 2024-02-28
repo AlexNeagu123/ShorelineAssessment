@@ -5,6 +5,9 @@ A simplified model of the classes I've created and the relationships between the
 
 ![Class Diagram](diag.png)
 
+# Algorithm Description 
+I've designed a singleton called _RobotRegistry_. Analogous to a database, this singleton manages a dictionary that maps each robot's **serial number (ID)** to the respective **Robot object**. All the operations involving robots are conducted by referencing this Registry solely based on the ID of a robot. Furthermore, each **Controller** is assigned a consecutive sequence of robot serial numbers. The sequences assigned to the Controllers are disjoint. During each round, the workload is executed by the robots first, followed by the controllers.
+
 # Runnable Simulation 
 The executable that should be run is located in the _[ShorelineTask/bin/Debug/net8.0](ShorelineTask/bin/Debug/net8.0)_ folder alongside the corresponding DLLs 
 ```
