@@ -1,5 +1,5 @@
 # Model 
-I developed the application in **C#** and tried my best to follow **object-oriented programming** principles.
+I developed the application in **C#** and tried my best to follow the **object-oriented programming** principles.
 
 A simplified model of the classes I've created and the relationships between them can be seen in the following figure.
 
