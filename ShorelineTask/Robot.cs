@@ -1,6 +1,4 @@
-﻿using static RobotWorkflow.Constants;
-
-namespace RobotWorkflow
+﻿namespace RobotWorkflow
 {
 
     /// <summary>
@@ -60,24 +58,24 @@ namespace RobotWorkflow
         {
             if (!IsActive)
             {
-                return NeutralScore;
+                return Constants.NeutralScore;
             }
 
             if (!IsHealthy)
             {
-                return UnhealthyPenalty;
+                return Constants.UnhealthyPenalty;
             }
 
             var random = new Random();
-            var workloadResult = random.Next(1, WorkloadUpper + 1);
+            var workloadResult = random.Next(1, Constants.WorkloadUpper + 1);
 
-            if (workloadResult <= WorkloadThreshold)
+            if (workloadResult <= Constants.WorkloadThreshold)
             {
-                return HealthyReward;
+                return Constants.HealthyReward;
             }
 
             IsHealthy = false;
-            return NeutralScore;
+            return Constants.NeutralScore;
         }
     }
 }
